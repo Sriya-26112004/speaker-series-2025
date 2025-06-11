@@ -5,8 +5,8 @@
 📍 **Location:** Microsoft, Hyderabad   
 🔗 **Event Link:** [Register on Meetup](https://www.meetup.com/dot-net-learners-house-hyderabad/events/308109558/?eventOrigin=group_events_list)
 
-**Speaker:** Yashasri Gudhe  
-**Topic:** **Prompt Engineering: Unlocking the Power of Generative AI**  
+**Speaker:** Kajjapu Sriya  
+**Topic:** **Introduction to LLMs and Prompt Engineering**  
 🛠️ **Live Demo:** LangChain in Action!
 
 ![GAIS Banner](event banner.png) 
