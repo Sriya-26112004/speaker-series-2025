@@ -9,10 +9,36 @@
 **Topic:** **Introduction to LLMs and Prompt Engineering**  
 🛠️ **Live Demo:** LangChain in Action!
 
-![GAIS Banner](event banner.png) 
+ ![GAIS Banner](event banner.png) 
 
 ---
+
+### Software/Tools
+
+> 1. OS: Windows 10/11 x64
+> 1. Python / .NET 8
+> 1. Visual Studio 2022
+> 1. Visual Studio Code
+
+### Prior Knowledge
+
+> 1. Programming knowledge in C# / Python
+
+## Technology Stack
+
+> 1. .NET 8, AI, Open AI
+
+---
+
 ![Information | 100x100](../Information.png)
+
+---
+
+ ### What are we doing today?
+1. Understanding Prompt Engineering
+2. What is prompting and why it matters in AI.
+3. How prompts guide reasoning and improve accuracy.
+4. Real-world use cases with simple examples.
 
 ---
 
