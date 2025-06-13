@@ -206,7 +206,7 @@ It’s the art of asking questions the right way. The better the prompt, the bet
 
 ## 🔗 Stay Connected
 
-- [LinkedIn – Yashasri Gudhe]( https://www.linkedin.com/in/sriya-kajjapu-919231325)
+- [LinkedIn – Sriya Kajjapu]( https://www.linkedin.com/in/sriya-kajjapu-919231325)
 - [Global AI secunderabad](https://www.meetup.com/global-ai-secunderabad/)
 - [Dot Net Learner House](https://www.meetup.com/dot-net-learners-house-hyderabad/)
 - Contact: kajjapusriya@gmail.com
