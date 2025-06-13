@@ -53,133 +53,141 @@ It helps guide the model’s reasoning, improve accuracy, and ensure structured 
 
 ---
 
-## 🧰 Types of Prompting Techniques
-
-### 1. Zero-Shot Prompting
-
-> Ask the model to perform a task without giving any examples. Best for simple, common tasks.
-
-**Use Cases:**
-- Summarization  
-- Translation  
-- Direct question answering  
-
-```text
-Summarize the sentence: "Artificial intelligence is a rapidly growing field that focuses on building systems capable of performing tasks that typically require human intelligence."
-```
+# 🎤 Introduction to LLMs & Prompt Engineering
 
 ---
 
-### 2. Few-Shot Prompting
+## 🔹 1. Introduction
 
-> Provide 2–3 examples to show the model what kind of response is expected.
-
-**Use Cases:**
-- Text formatting
-- Pattern matching
-- Style transfer
-
-```text
-Q: Convert 'data science' to PascalCase  
-A: DataScience  
-Q: Convert 'student login' to PascalCase  
-A: StudentLogin  
-Q: Convert 'account settings' to PascalCase  
-A:
-```
+- **Transformers** are deep learning models that changed how machines understand human language by focusing on context and meaning through something called attention.
+- **LLMs**—like GPT-4, Claude, or LLaMA—are AI systems built using transformers, trained on huge datasets, and capable of generating human-like language.
+- **Prompt Engineering** is how we talk to these models to get the best results—like crafting the perfect question for the smartest assistant in the world
 
 ---
 
-### 3. Chain-of-Thought Prompting
+## 🔹 2. Transformers – The Backbone of AI
 
-> Guide the model to explain its reasoning step-by-step.
+### 🧠 What is a Transformer?
 
-**Use Cases:**
-- Math problems
-- Code analysis
-- Logical reasoning
+In 2017, a paper called "*Attention is All You Need*" introduced the Transformer architecture, and it revolutionized NLP—Natural Language Processing.
 
-```text
-Q: There are 10 cookies. Alice eats 3, and Bob eats 2. How many are left?  
-Let's think step-by-step.
-```
+**Why was it revolutionary?**
+- RNNs and LSTMs, older models, processed sentences word-by-word. They were slow and forgot long-term context.
+- **Transformers**, in contrast, process all words in parallel and decide what to ‘pay attention’ to.
 
 ---
 
-### 4. Prompt Chaining
+### 🔍 Key Concepts
 
-> Break down complex tasks into multiple connected prompts.
+- **Self-Attention**
 
-**Use Cases:**
-- Task automation
-- Multi-step workflows
+  > Example: In “The cat sat on the mat,” the word “sat” should focus more on “cat” than “mat.” Self-attention helps find that relationship.
 
-```text
-Step 1 Prompt:  
-Summarize the following GitHub issue: "The login button doesn't work on mobile devices running Safari."
+- **Multi-Head Attention**
 
-Step 2 Prompt:  
-Write a professional email to the mobile dev team with the summary:  
-"The login button is broken on Safari mobile. Needs urgent fix."
-```
+  > It’s like multiple minds looking at the same sentence from different angles.
+
+- **Positional Encoding**
+
+  > Since words are seen in parallel, we need to give the model a sense of order. That’s what positional encoding does—adds a rhythm or position to each word.
 
 ---
 
-### 5. Role Prompting
+### 🎥 Demo Idea
+- Highlight how in a sentence, different words relate with varying strengths.
+- E.g., show attention weights between “sat” and “cat” vs “sat” and “the”.
 
-> Assign a persona or role to influence tone or expertise level.
-
-**Use Cases:**
-- Professional reviews
-- Teaching or explaining concepts
-- Simulated interviews
-
-```text
-You are a senior software architect.  
-Please review the following microservices design for performance and scalability issues.
-```
+> Transformers allow models to handle long texts and generate more coherent language. They’re the brains behind all modern LLMs.
 
 ---
 
-### 6. Self-Consistency Prompting
+## 🔹 3. Large Language Models (LLMs) – Language Generation Engines
 
-> Run the same prompt multiple times to compare answers.
+### 💡 What is an LLM?
 
-**Use Cases:**
-- Brainstorming
-- Storytelling
-- Metaphor generation
-
-```text
-Q: Calculate 15% of 240
-
-Path 1:  
-- 10% of 240 = 24  
-- 5% is half of 10% = 12  
-- Total: 24 + 12 = 36
-
-Path 2:  
-- Convert 15% to decimal: 0.15  
-- Multiply: 240 × 0.15 = 36
-
-Path 3:  
-- Break down into: (240 × 10/100) + (240 × 5/100)  
-- = 24 + 12  
-- = 36
-```
+LLMs are transformers that have been trained on massive text data—books, websites, code, Wikipedia—to predict the next word in a sentence.
 
 ---
 
-## ✅ Best Practices for Prompt Engineering
+### 🧩 Key Ideas
 
-- **Be clear & specific:** Avoid vague instructions.
-- **Add context/examples:** Improve quality with samples.
-- **Guide reasoning:** Use "Let's think step-by-step".
-- **Assign roles:** Set tone and expertise.
-- **Test multiple prompts:** Find what works best.
-- **Break down tasks:** Use chaining for complex flows.
+- **Tokenization** – Breaks input into units (like words or subwords).
+  
+  > “ChatGPT is cool” → [“Chat”, “G”, “PT”, “is”, “cool”]
+
+- **Next Word Prediction** – Given a sentence, what’s the most probable next word?
+- **Fine-Tuning** – Pretrained models can be customized for tasks like legal advice, customer service, etc.
 
 ---
+
+### 🎥 Live Demo Idea
+
+1. Use GPT-4 or Azure OpenAI Studio.
+2. Try:
+    - “Write a haiku about space.”
+    - “Explain black holes in 5-year-old language.”
+    - “Help me debug a Python function.”
+
+> Notice how the same model adapts its tone, language, and depth just based on your request. That’s the power of LLMs!
+
+---
+
+## 🔹 4. Prompt Engineering – Crafting Better Inputs
+
+### 🛠️ What is Prompt Engineering?
+
+It’s the art of asking questions the right way. The better the prompt, the better the response.
+
+---
+
+### 📌 Prompt Styles
+
+- **Zero-shot Prompt**
+
+  > “Translate ‘Hello’ to French.” → “Bonjour”
+
+- **Few-shot Prompt**
+
+  > Give examples:
+  > 
+  > English → French  
+  > Hello → Bonjour  
+  > Thank you → Merci  
+  > Good night → ?
+
+- **Chain-of-Thought Prompt**
+
+  > “If Alice is taller than Bob, and Bob is taller than Carol, who’s tallest? Explain step by step.”
+
+---
+
+### 🎥 Demo (run three versions)
+
+1. **Prompt:**  
+   “Translate ‘Hello’ into Spanish.”  
+   **Output:** “Hola”
+
+2. **Prompt:**  
+   “You are an expert translator. Translate ‘Hello’ into Spanish and explain your reasoning.”  
+   **Output:** “Hola – this is the common Spanish greeting used worldwide...”
+
+3. **Prompt:**  
+   “Step-by-step, explain how ‘Hello’ translates into Spanish considering different dialects.”  
+   **Output:** Deeper, regional response.
+
+> See how more structured or role-specific prompts lead to better and richer answers? That’s prompt engineering in action.
+
+---
+
+## 🔹 5. Wrap-Up 
+
+### 🔄 Recap:
+
+- **Transformers:** The core technology that understands language using attention.
+- **LLMs:** Scaled-up transformers trained on massive text corpora.
+- **Prompt Engineering:** A technique to talk to LLMs effectively and creatively.
+
+💭 *In simple words: Transformers gave us the brain, LLMs gave us the language, and prompting is how we talk to them.*
 
 ## 🖼️ Resources for reference 
 1. [Prompt Engineering Guide – Covers fundamentals, techniques, and best practices.](https://www.promptingguide.ai/)
@@ -198,9 +206,9 @@ Path 3:
 
 ## 🔗 Stay Connected
 
-- [LinkedIn – Yashasri Gudhe](https://www.linkedin.com/in/gyashasri341/)
+- [LinkedIn – Yashasri Gudhe]( https://www.linkedin.com/in/sriya-kajjapu-919231325)
 - [Global AI secunderabad](https://www.meetup.com/global-ai-secunderabad/)
 - [Dot Net Learner House](https://www.meetup.com/dot-net-learners-house-hyderabad/)
-- Contact: yashasrigudhe@gmail.com
+- Contact: kajjapusriya@gmail.com
 
 ---
