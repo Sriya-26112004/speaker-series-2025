@@ -1,7 +1,7 @@
 # 🚀 Global AI Bootcamp – Prompt Engineering with LangChain
 
 📅 **Date:** 14 June 2025  
-🕙 **Time:** 10:00 AM IST  
+🕙 **Time:** 10:00 AM IST   
 📍 **Location:** Microsoft, Hyderabad   
 🔗 **Event Link:** [Register on Meetup](https://www.meetup.com/dot-net-learners-house-hyderabad/events/308109558/?eventOrigin=group_events_list)
 
@@ -93,7 +93,7 @@ In 2017, a paper called "*Attention is All You Need*" introduced the Transformer
 
 ---
 
-### 🎥 Demo Idea
+### 🎥 Use Case
 - Highlight how in a sentence, different words relate with varying strengths.
 - E.g., show attention weights between “sat” and “cat” vs “sat” and “the”.
 
@@ -120,7 +120,7 @@ LLMs are transformers that have been trained on massive text data—books, websi
 
 ---
 
-### 🎥 Live Demo Idea
+### 🎥 Use Cases
 
 1. Use GPT-4 or Azure OpenAI Studio.
 2. Try:
@@ -161,7 +161,7 @@ It’s the art of asking questions the right way. The better the prompt, the bet
 
 ---
 
-### 🎥 Demo (run three versions)
+### 🎥 Use Cases
 
 1. **Prompt:**  
    “Translate ‘Hello’ into Spanish.”  
