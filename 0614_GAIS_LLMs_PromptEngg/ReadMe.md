@@ -9,7 +9,7 @@
 **Topic:** **Introduction to LLMs and Prompt Engineering**  
 🛠️ **Live Demo:** LangChain in Action!
 
- ![GAIS Banner](event banner.png) 
+ ![GAIS Banner | 100x100] (../event banner.png) 
 
 ---
 
